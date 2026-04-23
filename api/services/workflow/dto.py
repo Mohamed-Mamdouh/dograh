@@ -135,6 +135,7 @@ class WebhookNodeData(_NodeDataBase):
 
 class QANodeData(_NodeDataBase):
     qa_enabled: bool = True
+    qa_analysis_provider: str = "dograh"
     qa_use_workflow_llm: bool = True
     qa_provider: Optional[str] = None
     qa_model: Optional[str] = None
@@ -144,6 +145,9 @@ class QANodeData(_NodeDataBase):
     qa_min_call_duration: int = 15
     qa_voicemail_calls: bool = False
     qa_sample_rate: int = 100
+    tuner_agent_id: Optional[str] = None
+    tuner_workspace_id: Optional[str] = None
+    tuner_api_key: Optional[str] = None
 
 
 # Union of every per-type data class — useful as a type annotation on
